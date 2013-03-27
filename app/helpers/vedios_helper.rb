@@ -1,0 +1,2 @@
+module VediosHelper
+end

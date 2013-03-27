@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ename: MyString
+  etype: MyString
+  elist: MyText
+  eprice: 1
+  eremain: 1
+
+two:
+  ename: MyString
+  etype: MyString
+  elist: MyText
+  eprice: 1
+  eremain: 1

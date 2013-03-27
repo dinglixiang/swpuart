@@ -1,0 +1,16 @@
+
+<% @equipment.each do |equipment| %>
+    <%= equipment.ename %>
+    <%= equipment.etype %>
+    <%= equipment.elist %>
+    <%= equipment.eprice %>
+    <%= equipment.eremain %>
+    <%= link_to 'Show', equipment %>
+    <%= link_to 'Edit', edit_equipment_path(equipment) %>
+    <%= link_to 'Destroy', equipment, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<% end %>
+
+<br />
+
+<%= link_to 'New Equipment', new_equipment_path %>

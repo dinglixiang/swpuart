@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ename:</b>
+  <%= @equipment.ename %>
+</p>
+
+<p>
+  <b>Etype:</b>
+  <%= @equipment.etype %>
+</p>
+
+<p>
+  <b>Elist:</b>
+  <%= @equipment.elist %>
+</p>
+
+<p>
+  <b>Eprice:</b>
+  <%= @equipment.eprice %>
+</p>
+
+<p>
+  <b>Eremain:</b>
+  <%= @equipment.eremain %>
+</p>
+
+
+<%= link_to 'Edit', edit_equipment_path(@equipment) %> |
+<%= link_to 'Back', equipment_index_path %>
