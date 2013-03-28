@@ -6,7 +6,11 @@
             <div class="notice">
             <!--通知公告-->
             <h1>通知公告</h1>
-            <%= @notice %>
+            <% @notices.each do |video| %>
+           <tr>
+           <h3 color="red"><td><%= video.ncontent %></td></h3>
+           </tr>
+           <% end %>
             <h2><a href="#">For more</a></h2>
         </div>
         <!--通知公告-->

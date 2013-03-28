@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
 
   def home
-  	@notices = Notice.first
+  	 @notices = Notice.all
   end
 end
