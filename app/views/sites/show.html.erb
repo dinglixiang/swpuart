@@ -1,20 +1,6 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Sname:</b>
-  <%= @site.sname %>
-</p>
-
-<p>
-  <b>Sdescribe:</b>
-  <%= @site.sdescribe %>
-</p>
-
-<p>
-  <b>Sstate:</b>
-  <%= @site.sstate %>
-</p>
-
-
+<div class="container">
+	<%= render :partial => @site%>
+    <%= simple_format @site.sdescribe %>
 <%= link_to 'Edit', edit_site_path(@site) %> |
 <%= link_to 'Back', sites_path %>
+</div>

@@ -7,6 +7,20 @@ RailsAdmin.config do |config|
   
   I18n.default_locale = :en
 
+  config.model Ckeditor::AttachmentFile do
+    visible false
+  end
+  config.model Ckeditor::Picture do
+    visible false
+  end
+  config.model Ckeditor::Asset do
+    visible false
+  end
+  config.model Rich::RichFile do
+    visible false
+  end
+
+
   ################  Global configuration  ################
 
   # Set the admin name here (optional second array element will appear in red). For example:
@@ -54,7 +68,6 @@ RailsAdmin.config do |config|
   # Anyway, here is how RailsAdmin saw your application's models when you ran the initializer:
   config.model User do
     #label_plural "管理账户"
-    list do
       field :email do
         label "邮箱"
       end
@@ -76,7 +89,6 @@ RailsAdmin.config do |config|
         label "创建时间"
         strftime_format "%Y-%m-%d"
       end
-    end
   end
   config.model Notice do
     field :ntitle do
@@ -85,9 +97,13 @@ RailsAdmin.config do |config|
     field :nfilenumber do
       label "文档编号"
     end
-    field :ncontent do
-      label "内容"
-    end
+    edit do
+      field :ncontent, :rich_editor do
+        label "内容"
+        # html_attributes rows: 20, cols: 50
+        #ckeditor true
+      end
+     end
     field :created_at do
         label "创建时间"
         strftime_format "%Y-%m-%d"
@@ -98,11 +114,17 @@ RailsAdmin.config do |config|
       field :sname do
         label "场地名称"
       end
+
       field :sdescribe do
-        label "场地描述"
+          label "场地描述"
+          html_attributes rows: 10, cols: 50
       end
-      field :sstate do
+
+      field :sstate ,:enum do
         label "场地状态"
+        enum do
+          ['空闲','忙碌']
+        end
       end
       field :created_at do
         label "创建时间"
@@ -117,8 +139,11 @@ RailsAdmin.config do |config|
     field :etype do
       label "设备类型"
     end
-    field :elist do
-      label "设备清单"
+    edit do
+      field :elist do
+        label "设备清单"
+        html_attributes rows: 10, cols: 50
+      end
     end
     field :eprice do
       label "设备报价"

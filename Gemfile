@@ -10,6 +10,11 @@ gem 'kaminari'
 gem 'rails_admin'
 gem 'bootstrap-sass', '~> 2.3.1.0'
 
+gem 'ckeditor'
+gem 'rich'
+gem "carrierwave"
+gem "mini_magick"
+
 gem 'simple_form'
 
 # Gems used only for assets and not required

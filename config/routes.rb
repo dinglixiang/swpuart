@@ -1,5 +1,9 @@
 Swpuart::Application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
+
+  mount Rich::Engine => '/rich', :as => 'rich'
+
   resources :vedios
 
 
