@@ -1,0 +1,10 @@
+<div class="post">
+    <%= link_to equipment.ename %>
+    <%= equipment.etype %>
+    <%= equipment.elist %>
+    <%= equipment.eprice %>
+    <%= equipment.eremain %>
+    <%= link_to 'Show', equipment %>
+    <%= link_to 'Edit', edit_equipment_path(equipment) %>
+    <%= link_to 'Destroy', equipment, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>

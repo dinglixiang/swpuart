@@ -6,18 +6,19 @@ Swpuart::Application.routes.draw do
 
   resources :vedios
 
-
   devise_for :users
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   root :to => 'static_pages#home'
-  resources :sites
-
+  match '/rules',  to: 'static_pages#rules'
+  resources :sites do
+    collection do
+    get 'siteorder'
+    end
+  end
 
   resources :equipment
-
-
   resources :notices
 
 

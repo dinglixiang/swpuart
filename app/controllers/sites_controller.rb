@@ -1,6 +1,5 @@
 class SitesController < ApplicationController
-  # GET /sites
-  # GET /sites.json
+
   def index
      #@sites = Site.all
     # @sites = Kaminari.paginate_array(sites).page(params[:page]).per(10)
@@ -12,8 +11,6 @@ class SitesController < ApplicationController
     end
   end
 
-  # GET /sites/1
-  # GET /sites/1.json
   def show
     @site = Site.find(params[:id])
 
@@ -23,8 +20,7 @@ class SitesController < ApplicationController
     end
   end
 
-  # GET /sites/new
-  # GET /sites/new.json
+
   def new
     @site = Site.new
 
@@ -34,13 +30,10 @@ class SitesController < ApplicationController
     end
   end
 
-  # GET /sites/1/edit
   def edit
     @site = Site.find(params[:id])
   end
 
-  # POST /sites
-  # POST /sites.json
   def create
     @site = Site.new(params[:site])
 
@@ -55,8 +48,6 @@ class SitesController < ApplicationController
     end
   end
 
-  # PUT /sites/1
-  # PUT /sites/1.json
   def update
     @site = Site.find(params[:id])
 
@@ -71,8 +62,6 @@ class SitesController < ApplicationController
     end
   end
 
-  # DELETE /sites/1
-  # DELETE /sites/1.json
   def destroy
     @site = Site.find(params[:id])
     @site.destroy
@@ -81,5 +70,10 @@ class SitesController < ApplicationController
       format.html { redirect_to sites_url }
       format.json { head :no_content }
     end
+  end
+
+  def siteorder
+    #@orders=Site.find_all_by_sstate("忙碌")
+    #@orders=Site.find_by_sql("select * from sites where sstate='忙碌'")
   end
 end

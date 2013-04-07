@@ -1,16 +1,23 @@
+<div class="container">
+  <div class="center_content">
+    <div class="left_nav">
+      <ul>
+          <li><a href="#">实验设备</a></li>
+            <li><a href="#">预约情况</a></li>
+            <li><a href="#">使用情况</a></li>
+        </ul>
+  </div>
 
-<% @equipment.each do |equipment| %>
-    <%= equipment.ename %>
-    <%= equipment.etype %>
-    <%= equipment.elist %>
-    <%= equipment.eprice %>
-    <%= equipment.eremain %>
-    <%= link_to 'Show', equipment %>
-    <%= link_to 'Edit', edit_equipment_path(equipment) %>
-    <%= link_to 'Destroy', equipment, method: :delete, data: { confirm: 'Are you sure?' } %>
+<div class="right_content">
+      <div class="logoer"><%= image_tag 'order_2.gif'%></div>
 
-<% end %>
-
+              <%= render @equipment %>
+    </div>
+</div>
+<div class="centerplay">
+    <%= paginate @equipment %>
+</div> 
 <br />
-
 <%= link_to 'New Equipment', new_equipment_path %>
+</div>
+

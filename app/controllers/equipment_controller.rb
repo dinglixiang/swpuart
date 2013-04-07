@@ -1,8 +1,7 @@
 class EquipmentController < ApplicationController
-  # GET /equipment
-  # GET /equipment.json
+
   def index
-    @equipment = Equipment.all
+    @equipment=Equipment.page(params[:page]).per(2)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -10,8 +9,6 @@ class EquipmentController < ApplicationController
     end
   end
 
-  # GET /equipment/1
-  # GET /equipment/1.json
   def show
     @equipment = Equipment.find(params[:id])
 
@@ -21,8 +18,6 @@ class EquipmentController < ApplicationController
     end
   end
 
-  # GET /equipment/new
-  # GET /equipment/new.json
   def new
     @equipment = Equipment.new
 
@@ -32,13 +27,10 @@ class EquipmentController < ApplicationController
     end
   end
 
-  # GET /equipment/1/edit
   def edit
     @equipment = Equipment.find(params[:id])
   end
 
-  # POST /equipment
-  # POST /equipment.json
   def create
     @equipment = Equipment.new(params[:equipment])
 
@@ -53,8 +45,6 @@ class EquipmentController < ApplicationController
     end
   end
 
-  # PUT /equipment/1
-  # PUT /equipment/1.json
   def update
     @equipment = Equipment.find(params[:id])
 
@@ -69,8 +59,6 @@ class EquipmentController < ApplicationController
     end
   end
 
-  # DELETE /equipment/1
-  # DELETE /equipment/1.json
   def destroy
     @equipment = Equipment.find(params[:id])
     @equipment.destroy
