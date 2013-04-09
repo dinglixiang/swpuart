@@ -19,6 +19,9 @@ en:
       truncate: "..."
   activerecord:
     models:
+      eorder:
+        one: "设备预约"
+        other: "设备预约"
       user: 
         one: "管理用户"
         other: "管理用户"

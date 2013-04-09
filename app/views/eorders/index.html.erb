@@ -1,0 +1,37 @@
+<h1>Listing eorders</h1>
+
+<table>
+  <tr>
+    <th>Eapplicant</th>
+    <th>Etel</th>
+    <th>Eusetime</th>
+    <th>Eusereason</th>
+    <th>Eartopinion</th>
+    <th>Ereturntime</th>
+    <th>Esituation</th>
+    <th>Ekeeper</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @eorders.each do |eorder| %>
+  <tr>
+    <td><%= eorder.eapplicant %></td>
+    <td><%= eorder.etel %></td>
+    <td><%= eorder.eusetime %></td>
+    <td><%= eorder.eusereason %></td>
+    <td><%= eorder.eartopinion %></td>
+    <td><%= eorder.ereturntime %></td>
+    <td><%= eorder.esituation %></td>
+    <td><%= eorder.ekeeper %></td>
+    <td><%= link_to 'Show', eorder %></td>
+    <td><%= link_to 'Edit', edit_eorder_path(eorder) %></td>
+    <td><%= link_to 'Destroy', eorder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Eorder', new_eorder_path %>

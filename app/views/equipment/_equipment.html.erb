@@ -4,6 +4,7 @@
     <%= equipment.elist %>
     <%= equipment.eprice %>
     <%= equipment.eremain %>
+    <%= link_to '预约', new_eorder_path  %>
     <%= link_to 'Show', equipment %>
     <%= link_to 'Edit', edit_equipment_path(equipment) %>
     <%= link_to 'Destroy', equipment, method: :delete, data: { confirm: 'Are you sure?' } %>

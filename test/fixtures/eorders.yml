@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  eapplicant: MyString
+  etel: MyString
+  eusetime: MyString
+  eusereason: MyString
+  eartopinion: MyString
+  ereturntime: MyString
+  esituation: MyString
+  ekeeper: MyString
+
+two:
+  eapplicant: MyString
+  etel: MyString
+  eusetime: MyString
+  eusereason: MyString
+  eartopinion: MyString
+  ereturntime: MyString
+  esituation: MyString
+  ekeeper: MyString

@@ -90,6 +90,7 @@ RailsAdmin.config do |config|
         strftime_format "%Y-%m-%d"
       end
   end
+
   config.model Notice do
     field :ntitle do
       label "标题"
@@ -153,7 +154,38 @@ RailsAdmin.config do |config|
     end
   end
 
-
+  config.model Eorder do
+    field :eapplicant  do
+      label "申请人"
+    end
+    field :etel  do
+      label "联系电话"
+    end
+    field :eusetime  do
+      label "使用时间"
+    end
+    field :eusereason  do
+      label "借用原因"
+    end
+    field :ename  do
+      label "设备名称"
+    end
+    field :eartopinion  do
+      label "艺术教学实验中心意见"
+      enum do
+          ['同意','拒绝']
+        end
+    end
+    field :ereturntime  do
+      label "归还时间"
+    end
+    field :esituation  do
+      label "设备归还检查情况"
+    end
+    field :ekeeper  do
+      label "外借期间设备保管人"
+    end
+  end
   ###  Equipment  ###
 
   # config.model 'Equipment' do

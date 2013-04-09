@@ -1,0 +1,41 @@
+<h1>所有的视频</h1>
+
+<table>
+  
+<% @videos.each do |video| %>
+  <tr>
+     <td id="myContent">
+        
+         Alternative content
+     </td>
+     <td>
+       <%= video.name %>
+     </td>   
+  </tr>
+
+  <tr>
+     <td><%= link_to '播放', video %></td>
+     <td><%= link_to 'Edit', edit_video_path(video) %></td>
+     <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+
+  <script type="text/javascript" src="swfobject.js"></script>
+
+<script type="text/javascript">  
+  var so = new SWFObject('<%= video.avatar.url%>', 'mpl', '100', '100', '8');  
+    
+  so.addParam('allowfullscreen', 'true');
+  so.addParam('play ', 'false');  
+  so.addVariable('height', '360');  
+  so.addVariable('width', '480');  
+  
+  so.write('myContent');  
+</script>  
+<% end %>
+</table>
+
+
+  
+<br />
+
+<%= link_to 'New Video', new_video_path %>

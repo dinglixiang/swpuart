@@ -1,0 +1,74 @@
+<%= form_for(@eorder) do |f| %>
+  <% if @eorder.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@eorder.errors.count, "error") %> prohibited this eorder from being saved:</h2>
+
+      <ul>
+      <% @eorder.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table border=2>
+    <tr>
+      <div class="field">
+      <td><%= f.label :申请人 %></td>
+      <td><%= f.text_field :eapplicant %></td>
+      </div>
+    </tr>
+     <tr>
+      <div class="field">
+      <td><%= f.label :联系电话 %></td>
+      <td><%= f.text_field :etel %></td>
+      </div>
+    </tr>
+    <tr>
+      <div class="field">
+      <td><%= f.label :使用时间 %></td>
+      <td><%= f.text_field :eusetime %></td>
+      </div>
+    </tr>
+    <tr>
+      <div class="field">
+      <td><%= f.label :长时间借用原因 %></td>
+      <td><%= f.text_field :eusereason %></td>
+      </div>
+    </tr>
+    <tr>
+      <div class="field">
+      <td><%= f.label :设备名称 %></td>
+      <td><%= f.text_field :ename %></td>
+      </div>
+    </tr>
+    <tr>
+      <div class="field">
+      <td><%= f.label :艺术教学实验中心意见 %></td>
+      <td><%= f.text_field :eartopinion %></td>
+      </div>
+    </tr>
+    <tr>
+      <div class="field">
+      <td><%= f.label :归还时间 %></td>
+      <td><%= f.text_field :ereturntime %></td>
+      </div>
+    </tr>
+    <tr>
+      <div class="field">
+      <td><%= f.label :设备归还检查情况 %></td>
+      <td><%= f.text_field :esituation %></td>
+      </div>
+    </tr>
+    <tr>
+      <div class="field">
+      <td><%= f.label :外借期间设备保管人 %></td>
+      <td><%= f.text_field :ekeeper %></td>
+      </div>
+    </tr>
+  </table>
+ <br/>
+  <div class="actions">
+    <%= f.submit '提交' %>
+  </div>
+<% end %>
