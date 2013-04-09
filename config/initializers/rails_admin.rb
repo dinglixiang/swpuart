@@ -170,7 +170,7 @@ RailsAdmin.config do |config|
     field :ename  do
       label "设备名称"
     end
-    field :eartopinion  do
+    field :eartopinion ,:enum do
       label "艺术教学实验中心意见"
       enum do
           ['同意','拒绝']

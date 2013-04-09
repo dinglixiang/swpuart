@@ -117,7 +117,6 @@ ActiveRecord::Schema.define(:version => 20130409073207) do
     t.string   "vname"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "avatar"
   end
 
   create_table "videos", :force => true do |t|
