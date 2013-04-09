@@ -146,11 +146,10 @@ RailsAdmin.config do |config|
         html_attributes rows: 10, cols: 50
       end
     end
-
     field :eprice do
       label "设备报价"
     end
-    
+
     field :eremain do
       label "剩余量"
     end

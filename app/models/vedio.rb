@@ -1,4 +1,4 @@
-class Video < ActiveRecord::Base
+class Vedio < ActiveRecord::Base
    attr_accessible :name,:avatar
 
   mount_uploader :avatar, AvatarUploader

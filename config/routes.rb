@@ -3,14 +3,11 @@ Swpuart::Application.routes.draw do
   resources :eorders
 
 
-  resources :videos
-
+  resources :vedios
 
   mount Ckeditor::Engine => '/ckeditor'
 
   mount Rich::Engine => '/rich', :as => 'rich'
-
-  resources :vedios
 
   devise_for :users
 
