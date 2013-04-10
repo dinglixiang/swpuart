@@ -3,7 +3,7 @@ Swpuart::Application.routes.draw do
   resources :eorders
 
 
-  resources :vedios
+  resources :videos
 
   mount Ckeditor::Engine => '/ckeditor'
 

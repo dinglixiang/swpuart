@@ -2,27 +2,27 @@
 
 <table>
   
-<% @vedios.each do |vedio| %>
+<% @videos.each do |video| %>
   <tr>
      <td id="myContent">
         
          Alternative content
      </td>
      <td>
-       <%= vedio.name %>
+       <%= video.name %>
      </td>   
   </tr>
 
   <tr>
-     <td><%= link_to '播放', vedio %></td>
-     <td><%= link_to 'Edit', edit_video_path(vedio) %></td>
-     <td><%= link_to 'Destroy', vedio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+     <td><%= link_to '播放', video %></td>
+     <td><%= link_to 'Edit', edit_video_path(video) %></td>
+     <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 
   <script type="text/javascript" src="swfobject.js"></script>
 
 <script type="text/javascript">  
-  var so = new SWFObject('<%= vedio.avatar.url%>', 'mpl', '100', '100', '8');  
+  var so = new SWFObject('<%= video.avatar.url%>', 'mpl', '100', '100', '8');  
     
   so.addParam('allowfullscreen', 'true');
   so.addParam('play ', 'false');  
@@ -38,4 +38,4 @@
   
 <br />
 
-<%= link_to 'New Video', new_video_path %>
+<%= link_to 'New Vedio', new_vedio_path %>
