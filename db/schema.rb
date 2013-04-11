@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130409073207) do
+ActiveRecord::Schema.define(:version => 20130411001333) do
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(:version => 20130409073207) do
     t.integer  "eremain"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "epicture"
   end
 
   create_table "notices", :force => true do |t|

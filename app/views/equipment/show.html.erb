@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<p><%= image_tag(@equipment.epicture.url) if @equipment.epicture.present? %></p>
 <p>
   <b>Ename:</b>
   <%= @equipment.ename %>
