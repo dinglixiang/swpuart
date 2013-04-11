@@ -1,10 +1,10 @@
-<%= form_for(@vedio) do |f| %>
-  <% if @vedio.errors.any? %>
+<%= form_for(@video) do |f| %>
+  <% if @video.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@vedio.errors.count, "error") %> prohibited this vedio from being saved:</h2>
+      <h2><%= pluralize(@video.errors.count, "error") %> prohibited this video from being saved:</h2>
 
       <ul>
-      <% @vedio.errors.full_messages.each do |msg| %>
+      <% @video.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>

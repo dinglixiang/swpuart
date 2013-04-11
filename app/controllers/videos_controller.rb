@@ -1,4 +1,4 @@
-class VediosController < ApplicationController
+class VideosController < ApplicationController
   # GET /vedios
   # GET /vedios.json
   def index
