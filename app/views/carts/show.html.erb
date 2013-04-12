@@ -3,13 +3,29 @@
 
 <table border=2>
     <tr>
-	<td>设备名</td>
+	
 	<td>申请人</td>
+	<td>联系电话</td>
+	<td>使用时间</td>
+	<td>长时间借用原因</td>
+	<td>设备名</td>
+	<td>艺术教学实验中心意见</td>
+	<td>归还时间</td>
+	<td>设备归还检查情况</td>
+	<td>外借期间设备保管人</td>
 </tr>
 	<% @cart.line_items.each do |item| %>
 	<tr>
-	   <td><%= item.eorder.ename %></td>
+	   
        <td><%= item.eorder.eapplicant %></td>
+       <td><%= item.eorder.etel %></td>
+       <td><%= item.eorder.eusetime %></td>
+       <td><%= item.eorder.eusereason %></td>
+       <td><%= item.eorder.ename %></td>
+       <td><%= item.eorder.eartopinion %></td>
+       <td><%= item.eorder.ereturntime %></td>
+       <td><%= item.eorder.esituation %></td>
+       <td><%= item.eorder.ekeeper %></td>
     </tr>
    <% end %>
 </table>

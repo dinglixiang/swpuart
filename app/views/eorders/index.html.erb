@@ -29,7 +29,7 @@
     <td><%= eorder.ereturntime %></td>
     <td><%= eorder.esituation %></td>
     <td><%= eorder.ekeeper %></td>
-    <td><%=button_to 'add',line_items_path(:eorder_id => eorder) %></td>
+    <td><%=button_to '批准',line_items_path(:eorder_id => eorder) %></td>
     <td><%= link_to 'Show', eorder %></td>
     <td><%= link_to 'Edit', edit_eorder_path(eorder) %></td>
     <td><%= link_to 'Destroy', eorder, method: :delete, data: { confirm: 'Are you sure?' } %></td>

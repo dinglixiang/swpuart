@@ -9,7 +9,7 @@
     <div><%= equipment.elist %></div>
     <div><%= equipment.eprice %></div>
     <div><%= equipment.eremain %></div>
-    <td><%= link_to '预约',new_eorder_path%></td>
+    <td><%= link_to '预约',new_eorder_path(:equipment_id => equipment.id)%></td>
     <div><%= link_to 'Show', equipment %></div>
     <div><%= link_to 'Edit', edit_equipment_path(equipment) %></div>
     <div><%= link_to 'Destroy', equipment, method: :delete, data: { confirm: 'Are you sure?' } %></div>
