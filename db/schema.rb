@@ -11,7 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130411001333) do
+ActiveRecord::Schema.define(:version => 20130412035701) do
+
+  create_table "carts", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -41,6 +46,7 @@ ActiveRecord::Schema.define(:version => 20130411001333) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "ename"
+    t.string   "eordername"
   end
 
   create_table "equipment", :force => true do |t|
@@ -52,6 +58,13 @@ ActiveRecord::Schema.define(:version => 20130411001333) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "epicture"
+  end
+
+  create_table "line_items", :force => true do |t|
+    t.integer  "eorder_id"
+    t.integer  "cart_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "notices", :force => true do |t|
@@ -113,6 +126,12 @@ ActiveRecord::Schema.define(:version => 20130411001333) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "vedios", :force => true do |t|
+    t.string   "vname"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "videos", :force => true do |t|
     t.string   "name"

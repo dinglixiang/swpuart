@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<h2>成功预约者列表</h2>
+
+<table border=2>
+    <tr>
+	<td>设备名</td>
+	<td>申请人</td>
+</tr>
+	<% @cart.line_items.each do |item| %>
+	<tr>
+	   <td><%= item.eorder.ename %></td>
+       <td><%= item.eorder.eapplicant %></td>
+    </tr>
+   <% end %>
+</table>
+
+
