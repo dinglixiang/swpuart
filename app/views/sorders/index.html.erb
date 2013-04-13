@@ -11,16 +11,17 @@
 <div class="right_content">
       <div class="logoer"><%= image_tag 'order_2.gif'%></div>
       <ul id="place">
-        <%= render @sites%> 
+        <%= render @sorders%> 
       </ul>
 </div>
       
 </div>
 <div class="centerplay">
-        <%= paginate @sites %>
+        <%= paginate @sorders %>
       </div>  
 <br />
 
-<%= link_to 'New Site', new_site_path %>
+<%= link_to 'New Sorder', new_sorder_path %>
 
 </div>
+

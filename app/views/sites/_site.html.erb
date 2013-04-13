@@ -1,11 +1,13 @@
-<ul id="place">
-      <li>      
-        <%= link_to site.sname ,site%>
-        <%= site.sdescribe %>
-        <%= site.sstate %>
-        <%= link_to 'Show', site %>
-        <%= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' } %>       
-      </li>
-</ul>
+<li>      
+    <%= link_to site.sname ,site%>
+    <%= site.sdescribe %>
+    <%= site.sstate %>
+    <%= link_to '预约', new_sorder_path %> |
+    <%= link_to 'Show', site %> |
+    <%= link_to 'Edit', edit_site_path(site) %> |
+    <%= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' } %>       
+ </li>
+      
+
 
   

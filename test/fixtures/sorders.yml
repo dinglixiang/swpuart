@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sapplicant: MyString
+  stel: MyString
+  susetime: MyString
+  susereason: MyString
+  sname: MyString
+  sopinion: MyString
+  sreturntime: MyString
+  ssituation: MyString
+  skeeper: MyString
+
+two:
+  sapplicant: MyString
+  stel: MyString
+  susetime: MyString
+  susereason: MyString
+  sname: MyString
+  sopinion: MyString
+  sreturntime: MyString
+  ssituation: MyString
+  skeeper: MyString

@@ -66,51 +66,8 @@ RailsAdmin.config do |config|
 
   # Now you probably need to tour the wiki a bit: https://github.com/sferik/rails_admin/wiki
   # Anyway, here is how RailsAdmin saw your application's models when you ran the initializer:
-  config.model User do
-    #label_plural "管理账户"
-      field :email do
-        label "邮箱"
-      end
 
-      field :password do
-        label "密码"
-      end
-      field :sign_in_count do
-        label "累计登录次数"
-      end
-      field :last_sign_in_at do
-        label "上次登录时间"
-        strftime_format "%Y-%m-%d"
-      end
-      field :last_sign_in_ip do
-        label "上次登录ip地址"
-      end
-      field :created_at do
-        label "创建时间"
-        strftime_format "%Y-%m-%d"
-      end
-  end
-
-  config.model Notice do
-    field :ntitle do
-      label "标题"
-    end
-    field :nfilenumber do
-      label "文档编号"
-    end
-    edit do
-      field :ncontent, :rich_editor do
-        label "内容"
-        # html_attributes rows: 20, cols: 50
-        #ckeditor true
-      end
-     end
-    field :created_at do
-        label "创建时间"
-        strftime_format "%Y-%m-%d"
-      end
-  end
-
+  #场地设施
   config.model Site do
       field :sname do
         label "场地名称"
@@ -133,6 +90,41 @@ RailsAdmin.config do |config|
       end
   end
 
+  #场地预约申请表
+  config.model Sorder do
+    field :sapplicant  do
+      label "申请人"
+    end
+    field :stel  do
+      label "联系电话"
+    end
+    field :susetime  do
+      label "使用时间"
+    end
+    field :susereason  do
+      label "借用原因"
+    end
+    field :sname  do
+      label "设备名称"
+    end
+    field :sopinion ,:enum do
+      label "艺术教学实验中心意见"
+      enum do
+          ['同意','拒绝']
+        end
+    end
+    field :sreturntime  do
+      label "归还时间"
+    end
+    field :ssituation  do
+      label "设备归还检查情况"
+    end
+    field :skeeper  do
+      label "外借期间设备保管人"
+    end
+  end
+
+  #实验设备
   config.model Equipment do
     field :ename do
       label "设备名称"
@@ -155,6 +147,7 @@ RailsAdmin.config do |config|
     end
   end
 
+  #设备预约表
   config.model Eorder do
     field :eapplicant  do
       label "申请人"
@@ -187,6 +180,77 @@ RailsAdmin.config do |config|
       label "外借期间设备保管人"
     end
   end
+
+  
+
+   #规章制度
+   config.model Rule do
+    field :rtitle do
+      label "标题"
+    end
+    field :rpublisher do
+      label "发布者"
+    end
+    edit do
+      field :rcontent, :rich_editor do
+        label "内容"
+        # html_attributes rows: 20, cols: 50
+        #ckeditor true
+      end
+     end
+    field :created_at do
+        label "创建时间"
+        strftime_format "%Y-%m-%d"
+      end
+   end 
+
+   #通知公告
+  config.model Notice do
+    field :ntitle do
+      label "标题"
+    end
+    field :nfilenumber do
+      label "文档编号"
+    end
+    edit do
+      field :ncontent, :rich_editor do
+        label "内容"
+        # html_attributes rows: 20, cols: 50
+        #ckeditor true
+      end
+     end
+    field :created_at do
+        label "创建时间"
+        strftime_format "%Y-%m-%d"
+      end
+  end
+
+  #用户账户
+  config.model User do
+    #label_plural "管理账户"
+      field :email do
+        label "邮箱"
+      end
+
+      field :password do
+        label "密码"
+      end
+      field :sign_in_count do
+        label "累计登录次数"
+      end
+      field :last_sign_in_at do
+        label "上次登录时间"
+        strftime_format "%Y-%m-%d"
+      end
+      field :last_sign_in_ip do
+        label "上次登录ip地址"
+      end
+      field :created_at do
+        label "创建时间"
+        strftime_format "%Y-%m-%d"
+      end
+  end
+
   ###  Equipment  ###
 
   # config.model 'Equipment' do
