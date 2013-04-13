@@ -40,10 +40,12 @@ class EordersController < ApplicationController
   # POST /eorders
   # POST /eorders.json
   def create
+    # @equipment=pass_equipment(params[:equipment_id])
+    # @equipment.eremain -= 1
     @eorder = Eorder.new(params[:eorder])
 
     respond_to do |format|
-      if @eorder.save
+      if @eorder.save #&& @equipment.save
         
         format.html { redirect_to equipment_index_path, notice: 'Eorder was successfully created.' }
         format.json { render json: @eorder, status: :created, location: @eorder }
@@ -80,5 +82,16 @@ class EordersController < ApplicationController
       format.html { redirect_to eorders_url }
       format.json { head :no_content }
     end
+  end
+
+  private 
+
+  def pass_equipment(equipment_id)
+    current_equipment=Equipment.find_by_id(equipment_id)
+    if current_equipment
+      current_equipment.eremain -= 1
+    
+    end
+    current_equipment
   end
 end
