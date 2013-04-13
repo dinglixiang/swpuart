@@ -9,30 +9,9 @@
         </ul>
   </div>
 
-<<<<<<< HEAD
-<% @eorders.each do |eorder| %>
-  <tr>
-    
-    <td><%= eorder.eapplicant %></td>
-    <td><%= eorder.etel %></td>
-    <td><%= eorder.eusetime %></td>
-    <td><%= eorder.eusereason %></td>
-    <td><%= eorder.ename %></td>
-    <td><%= eorder.eartopinion %></td>
-    <td><%= eorder.ereturntime %></td>
-    <td><%= eorder.esituation %></td>
-    <td><%= eorder.ekeeper %></td>
-    <td><%=button_to '批准',line_items_path(:eorder_id => eorder) %></td>
-    <td><%= link_to 'Show', eorder %></td>
-    <td><%= link_to 'Edit', edit_eorder_path(eorder) %></td>
-    <td><%= link_to 'Destroy', eorder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-=======
+
 <div class="right_content">
       <div class="logoer"><%= image_tag 'equipment_02.gif'%></div>
->>>>>>> develop
 
               <%= render @eorders %>
     </div>
