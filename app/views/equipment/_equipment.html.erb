@@ -1,8 +1,6 @@
 <div class="post">
-    <div>
         <%= image_tag(equipment.epicture.url(:one)) if equipment.epicture.present? %>
-    </div>
-	<div>
+
         <%= equipment.ename %>   
     <%= equipment.etype %>
     <%= equipment.elist %>
@@ -10,6 +8,5 @@
     <%= equipment.eremain %>
     <%= link_to '预约',new_eorder_path%>
 
-    </div>
     
 </div>
