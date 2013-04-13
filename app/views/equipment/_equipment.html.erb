@@ -1,22 +1,5 @@
 <div class="post">
 	<%= image_tag(equipment.epicture.url) if equipment.epicture.present? %>
-<<<<<<< HEAD
-
-	</div>
-	<div><%= link_to equipment.ename %></div>
-    
-    <div><%= equipment.etype %></div>
-    <div><%= equipment.elist %></div>
-    <div><%= equipment.eprice %></div>
-    <div><%= equipment.eremain %></div>
-    <td><%= link_to '预约',new_eorder_path(:equipment_id => equipment.id)%></td>
-    <div><%= link_to 'Show', equipment %></div>
-    <div><%= link_to 'Edit', edit_equipment_path(equipment) %></div>
-    <div><%= link_to 'Destroy', equipment, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-	
-    
-    
-=======
     <%= equipment.ename %>   
     <%= equipment.etype %>
     <%= equipment.elist %>
@@ -26,5 +9,5 @@
     <%= link_to 'Show', equipment %>
     <%= link_to 'Edit', edit_equipment_path(equipment) %>
     <%= link_to 'Destroy', equipment, method: :delete, data: { confirm: 'Are you sure?' } %>  
->>>>>>> develop
+
 </div>

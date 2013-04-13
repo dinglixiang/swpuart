@@ -12,8 +12,8 @@ gem 'bootstrap-sass', '~> 2.3.1.0'
 
 gem 'ckeditor'
 gem 'rich'
-gem "carrierwave"
-gem "mini_magick"
+
+gem 'mini_magick'
 
 gem 'simple_form'
 
