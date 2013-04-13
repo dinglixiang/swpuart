@@ -3,5 +3,5 @@ class Equipment < ActiveRecord::Base
  
   mount_uploader :epicture, AvatarUploader
 
-  has_many :eorders
+  has_many :eorders, :dependent => :destroy
 end

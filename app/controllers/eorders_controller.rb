@@ -1,5 +1,7 @@
 #encoding:utf-8
+
 class EordersController < ApplicationController
+  
 
   def index
     eorders = Eorder.find_all_by_eartopinion("同意")
@@ -33,7 +35,7 @@ class EordersController < ApplicationController
 
     respond_to do |format|
       if @eorder.save #&& @equipment.save
-        
+        @equipment.eremain -=1
         format.html { redirect_to equipment_index_path, notice: 'Eorder was successfully created.' }
         format.json { render json: @eorder, status: :created, location: @eorder }
       else
