@@ -1,14 +1,12 @@
 Swpuart::Application.routes.draw do
 
+  resources :rules
+
+
+  resources :sorders
   resources :line_items
-
-
   resources :carts
-
-
   resources :eorders
-
-
   resources :videos
 
   mount Ckeditor::Engine => '/ckeditor'
@@ -20,7 +18,7 @@ Swpuart::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   root :to => 'static_pages#home'
-  match '/rules',  to: 'static_pages#rules'
+  #match '/rules',  to: 'static_pages#rules'
   resources :sites do
     collection do
     get 'siteorder'

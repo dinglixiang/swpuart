@@ -1,3 +1,5 @@
+
+
 <div class="container">
 <div class="center_content">
   <div class="left_nav">
@@ -11,16 +13,15 @@
 <div class="right_content">
       <div class="logoer"><%= image_tag 'order_2.gif'%></div>
       <ul id="place">
-        <%= render @sites%> 
+      	<h3>场 地 租 用 申 请 表</h3>
+        <%= render 'form' %>
       </ul>
 </div>
       
 </div>
-<div class="centerplay">
-        <%= paginate @sites %>
-      </div>  
+ 
 <br />
 
-<%= link_to 'New Site', new_site_path %>
+<%= link_to 'Back', sorders_path %>
 
 </div>

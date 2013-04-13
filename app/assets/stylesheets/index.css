@@ -30,7 +30,7 @@ a{text-decoration:none;}
 
 
 /*通知公告*/
-.notice{width:225px; height:341px; background:url(ArtWeb_10.gif) no-repeat;  position:relative; left:280px; top:-330px; padding:10px 20px;}
+.notice{width:225px; height:341px; background:url(ArtWeb_10.gif) no-repeat;  position:relative; left:280px; top:-330px; padding:10px 20px; margin-left: 355px;}
 .notice h1{color:#f8d449; margin-bottom:10px;} 
 .notice p{font-size:15px;  font-weight:500; color:#fff; margin-bottom:10px;}
 .notice p span{color:#f8d449;}

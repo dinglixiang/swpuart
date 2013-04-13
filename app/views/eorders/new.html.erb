@@ -1,5 +1,20 @@
-<h1>New eorder</h1>
+<div class="container">
+  <div class="center_content">
+    <div class="left_nav">
+      <ul>
+          <li><%= link_to '实验设备',equipment_index_path%></a></li>
+            <li><%= link_to '预约情况',eorders_path%></a></li>
+            <li><a href="#">使用情况</a></li>
+        </ul>
+  </div>
 
-<%= render 'form' %>
+<div class="right_content">
+      <div class="logoer"><%= image_tag 'equipment_02.gif'%></div>
+      		<h3>设 备 借 用 申 请 表</h3>
+              <%= render 'form' %>
+    </div>
+</div>
 
+<br />
 <%= link_to 'Back', eorders_path %>
+</div>

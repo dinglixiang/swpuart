@@ -1,28 +1,17 @@
+#encoding:utf-8
 class EordersController < ApplicationController
-  # GET /eorders
-  # GET /eorders.json
-  def index
-    @eorders = Eorder.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @eorders }
-    end
+  def index
+    eorders = Eorder.find_all_by_eartopinion("同意")
+    @eorders = Kaminari.paginate_array(eorders).page(params[:page]).per(2)
   end
 
-  # GET /eorders/1
-  # GET /eorders/1.json
   def show
     @eorder = Eorder.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @eorder }
-    end
+
   end
 
-  # GET /eorders/new
-  # GET /eorders/new.json
   def new
     @eorder = Eorder.new
 
@@ -32,15 +21,13 @@ class EordersController < ApplicationController
     end
   end
 
-  # GET /eorders/1/edit
   def edit
     @eorder = Eorder.find(params[:id])
   end
 
-  # POST /eorders
-  # POST /eorders.json
   def create
     @eorder = Eorder.new(params[:eorder])
+    #@eorder = Eorder.create(:ename => @equipment.ename)
 
     respond_to do |format|
       if @eorder.save
@@ -54,13 +41,12 @@ class EordersController < ApplicationController
     end
   end
 
-  # PUT /eorders/1
-  # PUT /eorders/1.json
   def update
     @eorder = Eorder.find(params[:id])
 
     respond_to do |format|
       if @eorder.update_attributes(params[:eorder])
+
         format.html { redirect_to @eorder, notice: 'Eorder was successfully updated.' }
         format.json { head :no_content }
       else
@@ -70,8 +56,6 @@ class EordersController < ApplicationController
     end
   end
 
-  # DELETE /eorders/1
-  # DELETE /eorders/1.json
   def destroy
     @eorder = Eorder.find(params[:id])
     @eorder.destroy

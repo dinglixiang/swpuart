@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= @rule.rtitle %>
+</p>
+
+<p>
+  <b>发布者:</b>
+  <%= @rule.rpublisher %>
+</p>
+
+<p>
+  <%= @rule.rcontent %>
+</p>
+
+
+<%= link_to 'Edit', edit_rule_path(@rule) %> |
+<%= link_to 'Back', rules_path %>
