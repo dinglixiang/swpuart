@@ -1,4 +1,5 @@
-<li>      
+<li>
+    <%= image_tag(site.spicture.url(:one)) if site.spicture.present? %>      
     <%= link_to site.sname ,site%>
     <%= site.sdescribe %>
     <%= site.sstate %>
