@@ -3,5 +3,8 @@
     <%= eorder.ename %> 成功
 
     <div class="pull-right"><%= eorder.created_at.strftime("%Y-%m-%d") %></div>
-    
+
+    <%= link_to 'Show', eorder %>
+    <%= link_to 'Edit', edit_eorder_path(eorder) %>
+    <%= link_to 'Destroy', eorder, method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>

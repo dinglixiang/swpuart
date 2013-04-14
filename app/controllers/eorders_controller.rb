@@ -16,11 +16,7 @@ class EordersController < ApplicationController
 
   def new
     @eorder = Eorder.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @eorder }
-    end
+    @equipment = Equipment.find_by_id(params[:equipment_id]) if params[:equipment_id]
   end
 
   def edit
@@ -28,20 +24,14 @@ class EordersController < ApplicationController
   end
 
   def create
-    # @equipment=pass_equipment(params[:equipment_id])
-    # @equipment.eremain -= 1
     @eorder = Eorder.new(params[:eorder])
-    #@eorder = Eorder.create(:ename => @equipment.ename)
-
-    respond_to do |format|
-      if @eorder.save #&& @equipment.save
-        @equipment.eremain -=1
-        format.html { redirect_to equipment_index_path, notice: 'Eorder was successfully created.' }
-        format.json { render json: @eorder, status: :created, location: @eorder }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @eorder.errors, status: :unprocessable_entity }
+    if @eorder.equipment.eremain < 1
+      redirect_to equipment_index_path, notice: "没有多余的设备"
+    else
+      if @eorder.save
+        # @eorder.equipment.update_column("eremain",@eorder.equipment.eremain - 1)  
       end
+      redirect_to equipment_index_path, notice: "预约成功"
     end
   end
 
@@ -50,7 +40,6 @@ class EordersController < ApplicationController
 
     respond_to do |format|
       if @eorder.update_attributes(params[:eorder])
-
         format.html { redirect_to @eorder, notice: 'Eorder was successfully updated.' }
         format.json { head :no_content }
       else

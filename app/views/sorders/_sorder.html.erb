@@ -2,4 +2,7 @@
     <%= sorder.sapplicant %> 申请
     <%= sorder.sname %> 成功
     <div class="pull-right"><%= sorder.created_at.strftime("%Y-%m-%d")%></div>
+    <%= link_to 'Show', sorder %>
+    <%= link_to 'Edit', edit_sorder_path(sorder) %>
+    <%= link_to 'Destroy', sorder, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>

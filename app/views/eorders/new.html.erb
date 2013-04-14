@@ -11,7 +11,7 @@
 <div class="right_content">
       <div class="logoer"><%= image_tag 'equipment_02.gif'%></div>
       		<h3>设 备 借 用 申 请 表</h3>
-              <%= render 'form' %>
+          <%= render :partial => "form", :locals => { :equipment => @equipment} %>
     </div>
 </div>
 

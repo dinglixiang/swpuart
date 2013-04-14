@@ -1,0 +1,8 @@
+<% @eorders.each do |eorder|%>
+    <ul>
+        <%= link_to(eorder) do %>
+        <li><%= eorder.ename%> <%= eorder.created_at.strftime("%Y年%m月%d日")%>已预约 <span><%= eorder.created_at.strftime("%Y.%m.%d")%></span></a></li>
+        <% end %>
+    </ul>
+<% end %>
+<h1><a href="eorders"></a></h1>
