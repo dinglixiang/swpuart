@@ -1,12 +1,12 @@
 <li>
-    <%= image_tag(site.spicture.url(:one)) if site.spicture.present? %>      
+
+	<%= image_tag(site.spicture.url(:one)) if site.spicture.present? %>  
+
     <%= link_to site.sname ,site%>
     <%= site.sdescribe %>
     <%= site.sstate %>
-    <%= link_to '预约', new_sorder_path %> |
-    <%= link_to 'Show', site %> |
-    <%= link_to 'Edit', edit_site_path(site) %> |
-    <%= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' } %>       
+    <%= link_to '预约', new_sorder_path %>
+      
  </li>
       
 
