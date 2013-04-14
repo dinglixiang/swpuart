@@ -1,3 +1,4 @@
+#encoding:utf-8
 class RulesController < ApplicationController
   # GET /rules
   # GET /rules.json
@@ -44,7 +45,7 @@ class RulesController < ApplicationController
 
     respond_to do |format|
       if @rule.save
-        format.html { redirect_to @rule, notice: 'Rule was successfully created.' }
+        format.html { redirect_to @rule, notice: '成功创建规章制度.' }
         format.json { render json: @rule, status: :created, location: @rule }
       else
         format.html { render action: "new" }
@@ -60,7 +61,7 @@ class RulesController < ApplicationController
 
     respond_to do |format|
       if @rule.update_attributes(params[:rule])
-        format.html { redirect_to @rule, notice: 'Rule was successfully updated.' }
+        format.html { redirect_to @rule, notice: '成功更新规章制度.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

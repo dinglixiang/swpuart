@@ -47,7 +47,7 @@ class SordersController < ApplicationController
 
     respond_to do |format|
       if @sorder.save
-        format.html { redirect_to sites_path, notice: 'Sorder was successfully created.' }
+        format.html { redirect_to sites_path, notice: '成功提交场地申请表.' }
         format.json { render json: @sorder, status: :created, location: @sorder }
       else
         format.html { render action: "new" }
@@ -63,7 +63,7 @@ class SordersController < ApplicationController
 
     respond_to do |format|
       if @sorder.update_attributes(params[:sorder])
-        format.html { redirect_to @sorder, notice: 'Sorder was successfully updated.' }
+        format.html { redirect_to @sorder, notice: '成功更新场地申请表.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

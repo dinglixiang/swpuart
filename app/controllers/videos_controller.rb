@@ -1,3 +1,4 @@
+#encoding:utf-8
 class VideosController < ApplicationController
   # GET /vedios
   # GET /vedios.json
@@ -44,7 +45,7 @@ class VideosController < ApplicationController
 
     respond_to do |format|
       if @video.save
-        format.html { redirect_to @video, notice: 'Vedio was successfully created.' }
+        format.html { redirect_to @video, notice: '成功创建视频.' }
         format.json { render json: @video, status: :created, location: @video }
       else
         format.html { render action: "new" }
@@ -60,7 +61,7 @@ class VideosController < ApplicationController
 
     respond_to do |format|
       if @video.update_attributes(params[:video])
-        format.html { redirect_to @video, notice: 'Vedio was successfully updated.' }
+        format.html { redirect_to @video, notice: '成功更新视频.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

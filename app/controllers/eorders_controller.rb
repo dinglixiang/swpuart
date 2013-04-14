@@ -5,7 +5,7 @@ class EordersController < ApplicationController
 
   def index
     eorders = Eorder.find_all_by_eartopinion("同意")
-    @eorders = Kaminari.paginate_array(eorders).page(params[:page]).per(2)
+    @eorders = Kaminari.paginate_array(eorders).page(params[:page]).per(5)
   end
 
   def show
@@ -35,8 +35,8 @@ class EordersController < ApplicationController
 
     respond_to do |format|
       if @eorder.save #&& @equipment.save
-        @equipment.eremain -=1
-        format.html { redirect_to equipment_index_path, notice: 'Eorder was successfully created.' }
+        # @equipment.eremain -=1
+        format.html { redirect_to equipment_index_path, notice: '成功提交设备申请表.' }
         format.json { render json: @eorder, status: :created, location: @eorder }
       else
         format.html { render action: "new" }
@@ -51,7 +51,7 @@ class EordersController < ApplicationController
     respond_to do |format|
       if @eorder.update_attributes(params[:eorder])
 
-        format.html { redirect_to @eorder, notice: 'Eorder was successfully updated.' }
+        format.html { redirect_to @eorder, notice: '成功更新设备申请表.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
