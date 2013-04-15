@@ -25,7 +25,12 @@ Swpuart::Application.routes.draw do
     end
   end
 
-  resources :equipment
+  resources :equipment do
+    collection do
+      get 'list'
+    end
+  end
+
   resources :notices
 
 

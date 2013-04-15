@@ -9,7 +9,8 @@ class Eorder < ActiveRecord::Base
   #has_many :line_items
   #before_destroy :ensure_not_referenced_by_any_line_item
 
-  # belongs_to :equipment
+  belongs_to :equipment
+
 
   private
   def ensure_not_referenced_by_any_line_item

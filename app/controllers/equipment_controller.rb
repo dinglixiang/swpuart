@@ -10,6 +10,10 @@ class EquipmentController < ApplicationController
     end
   end
 
+  def list
+    @lists=Equipment.page(params[:page]).per(1)
+  end
+
   def show
     @equipment = Equipment.find(params[:id])
 

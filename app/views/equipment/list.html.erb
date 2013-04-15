@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="center_content">
+    <div class="left_nav">
+      <ul>
+        </ul>
+  </div>
+
+<div class="right_content">
+      <div class="logoer"><%= image_tag 'equipment_02.gif'%></div>
+              <% @lists.each do |list|%>
+              <div class="post">
+                <%= list.ename %>   
+                <%= list.etype %>
+                <%= list.elist %>
+                <%= list.eprice %>
+                <%= list.eremain %>
+              </div>
+            <% end %>
+    </div>
+</div>
+<div class="centerplay">
+    <%= paginate @lists %>
+</div> 
