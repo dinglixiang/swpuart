@@ -1,3 +1,4 @@
+#encoding:utf-8
 class NoticesController < ApplicationController
 
   def index
@@ -38,7 +39,7 @@ class NoticesController < ApplicationController
 
     respond_to do |format|
       if @notice.save
-        format.html { redirect_to @notice, notice: 'Notice was successfully created.' }
+        format.html { redirect_to @notice, notice: '成功创建通知.' }
         format.json { render json: @notice, status: :created, location: @notice }
       else
         format.html { render action: "new" }
@@ -52,7 +53,7 @@ class NoticesController < ApplicationController
 
     respond_to do |format|
       if @notice.update_attributes(params[:notice])
-        format.html { redirect_to @notice, notice: 'Notice was successfully updated.' }
+        format.html { redirect_to @notice, notice: '成功更新通知.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

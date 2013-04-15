@@ -12,16 +12,16 @@
   <% end %>
   
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :视频名 %><br />
     <%= f.text_field :name %>
   </div>
   <p>
-        <label>My Avatar</label>
+        <label>视频文件</label>
         <%= f.file_field :avatar %>
        
       </p>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit '提交' %>
   </div>
 
 <% end %>

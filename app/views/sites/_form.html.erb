@@ -12,23 +12,23 @@
   <% end %>
 
 <div class="field">
-        <label>My Avatar</label>
+        <label>场地图片</label>
         <%= f.file_field :spicture %>
        
   </div>
   <div class="field">
-    <%= f.label :sname %><br />
+    <%= f.label :场地名 %><br />
     <%= f.text_field :sname %>
   </div>
   <div class="field">
-    <%= f.label :sdescribe %><br />
+    <%= f.label :场地描述 %><br />
     <%= f.text_area :sdescribe %>
   </div>
   <div class="field">
-    <%= f.label :sstate %><br />
+    <%= f.label :场地状态 %><br />
     <%= f.text_field :sstate %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit '提交' %>
   </div>
 <% end %>

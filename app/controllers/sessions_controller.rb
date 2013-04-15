@@ -1,3 +1,4 @@
+#encoding:utf-8
 class SessionsController < Devise::RegistrationsController
 	def index
 		:layout => false
