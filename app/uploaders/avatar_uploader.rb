@@ -5,16 +5,16 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
-  # include CarrierWave::RMagick
+  include CarrierWave::RMagick
 
-  # process :resize_to_fit => [800, 800]
+  process :resize_to_fit => [800, 800]
 
-  # # version :thumb do
-  # #   process :resize_to_fill => [200,200]
-  # # end
-  # version :one do
-  #   process :resize_to_fill => [100,100]
+  # version :thumb do
+  #   process :resize_to_fill => [200,200]
   # end
+  version :one do
+    process :resize_to_fill => [100,100]
+  end
 
   # Include the Sprockets helpers for Rails 3.1+ asset pipeline compatibility:
   # include Sprockets::Helpers::RailsHelper
@@ -27,7 +27,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
-    "uploads/video"
+    "uploads/epicture"
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
