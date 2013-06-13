@@ -1,17 +1,16 @@
-<div class="container">
+<div class="container2">
   <div class="center_content">
     <div class="left_nav">
       <ul>
-          <li><a href="#">近期新闻</a></li>
-            <li><a href="#">设备动态</a></li>
-            <li><a href="#">学院通知</a></li>
         </ul>
   </div>
 
 <div class="right_content">
       <div class="logoer"><%= image_tag 'order_2.gif'%></div>
-
-              <%= render @notices %>
+        <table class="table">
+          <%= render @notices %>
+        </table>
+        <hr>
     </div>
 </div>
 <div class="centerplay">
@@ -19,6 +18,5 @@
 </div> 
 <br />
 
-<%= link_to '新建通知', new_notice_path %>
 </div>
 

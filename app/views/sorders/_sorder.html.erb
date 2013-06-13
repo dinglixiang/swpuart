@@ -1,8 +1,9 @@
-<div>
-    <%= sorder.sapplicant %> 申请
-    <%= sorder.sname %> 成功
-    <div class="pull-right"><%= sorder.created_at.strftime("%Y-%m-%d")%></div>
-    <%= link_to 'Show', sorder %>
-    <%= link_to 'Edit', edit_sorder_path(sorder) %>
-    <%= link_to 'Destroy', sorder, method: :delete, data: { confirm: 'Are you sure?' } %>
-</div>
+<tr>
+  	<td class="span1"><%= sorder.sapplicant %></td> 
+    <td class="span1">申请</td> 
+    <td class="span2"><%= sorder.sname %></td> 
+    <td class="span1"><span class="label label-success">&nbsp;成功&nbsp;</span></td>
+    <td class="pull-right span1">
+    	<%= sorder.created_at.strftime("%Y-%m-%d")%>
+    </td>
+</tr>

@@ -1,15 +1,22 @@
-<div class="post">
+<tr>
+    <td class="span2">
     <%= image_tag(equipment.epicture.url(:one)) if equipment.epicture.present? %>
-
-    设备名称：<%= equipment.ename %>   
-    设备类型：<%= equipment.etype %>
-    设备清单：<%= equipment.elist %>
-    设备报价：<%= equipment.eprice %>
-    设备剩余量：<%= equipment.eremain %>
-
-    <%= link_to '预约',new_eorder_path(:equipment_id => equipment.id)%>
-    <%= link_to 'Show', equipment %>
-    <%= link_to 'Edit', edit_equipment_path(equipment) %>
-    <%= link_to 'Destroy', equipment, method: :delete, data: { confirm: 'Are you sure?' } %>
-   
-</div>
+    </td>
+    <td class="span3">
+        设备名称：<%= equipment.ename %>
+        <br />   
+        设备类型：<%= equipment.etype %>
+        <br /> 
+        设备清单：<%= equipment.elist %>
+        <br /> 
+        设备报价：<%= equipment.eprice %>￥
+        <br /> 
+        设备剩余量：<%= equipment.eremain %>
+        <br /> 
+    </td>
+    <td class="span2">
+        <br />
+    <%= link_to '预约',new_eorder_path(:equipment_id => equipment.id),:class => 'btn'%>
+   </td>
+</tr>
+    

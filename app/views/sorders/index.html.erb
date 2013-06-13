@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container2">
 <div class="center_content">
   <div class="left_nav">
       <ul>
@@ -10,10 +10,12 @@
 
 <div class="right_content">
       <div class="logoer"><%= image_tag 'order_2.gif'%></div>
-      <ul id="place">
-        
+      <!--<ul id="place">        
         <%= render @sorders%> 
-      </ul>
+      </ul>-->
+      <table class="table table-striped">
+        <%= render @sorders%> 
+      </table>
 </div>
       
 </div>
@@ -21,8 +23,6 @@
         <%= paginate @sorders %>
       </div>  
 <br />
-
-<%= link_to '新建场地预约表', new_sorder_path %>
 
 </div>
 

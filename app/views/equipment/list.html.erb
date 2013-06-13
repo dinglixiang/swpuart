@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container2">
   <div class="center_content">
     <div class="left_nav">
       <ul>
@@ -7,15 +7,34 @@
 
 <div class="right_content">
       <div class="logoer"><%= image_tag 'equipment_02.gif'%></div>
+          <div class="post">
+            <table class="table">
               <% @lists.each do |list|%>
-              <div class="post">
-                <%= list.ename %>   
+              <tr>
+                <td class="span2">
+                <%= list.ename %> 
+                </td>
+                <td class="span1">  
                 <%= list.etype %>
+                </td>
+                <td class="span3">
                 <%= list.elist %>
+                </td>
+                <td class="span1">
                 <%= list.eprice %>
+                </td>
+                <td class="span1">
                 <%= list.eremain %>
-              </div>
-            <% end %>
+                </td>
+                <td>
+                  <a href='#'><span class="label label-info">说明书下载</span></a>                    
+                </td>
+              </tr>
+              <% end %>
+
+            </table>
+            <hr />
+          </div>
     </div>
 </div>
 <div class="centerplay">

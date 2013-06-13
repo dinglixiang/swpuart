@@ -1,4 +1,4 @@
-<div>
-	<%= link_to_unless_current rule.rtitle ,rule%>
-	<%= rule.created_at.strftime("%Y-%m-%d")%>
-</div>
+<tr>
+	<td class="span6"><%= link_to_unless_current rule.rtitle ,rule%></td>
+	<td class="pull-right span2"><%= rule.created_at.strftime("%Y-%m-%d")%></td>
+</tr>

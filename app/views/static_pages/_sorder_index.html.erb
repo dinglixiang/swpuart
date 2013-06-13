@@ -1,7 +1,11 @@
 <% @sorders.each do |sorder|%>
     <ul>
         <%= link_to(sorder) do %>
-        <li><%= sorder.sname%> <%= sorder.created_at.strftime("%Y年%m月%d日")%>已预约 <span><%= sorder.created_at.strftime("%Y.%m.%d")%></span></a></li>
+        <li>
+        	<%= sorder.sname%>&nbsp;&nbsp;已被预约
+        	<span><%= sorder.created_at.strftime("%Y.%m.%d")%></span>
+        	</a>
+    	</li>
         <% end %>
     </ul>
 <% end %>
