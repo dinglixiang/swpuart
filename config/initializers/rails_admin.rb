@@ -84,6 +84,11 @@ RailsAdmin.config do |config|
           ['空闲','忙碌']
         end
       end
+      edit do
+      field :spicture do
+        label "图片"
+      end
+    end
       field :created_at do
         label "创建时间"
         strftime_format "%Y-%m-%d"
