@@ -2,7 +2,7 @@
 class EquipmentController < ApplicationController
 
   def index
-    @equipment=Equipment.page(params[:page]).per(4)
+    @equipment=Equipment.page(params[:page]).per(3)
 
     respond_to do |format|
       format.html # index.html.erb
