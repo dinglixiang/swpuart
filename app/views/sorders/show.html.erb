@@ -1,50 +1,48 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Sapplicant:</b>
-  <%= @sorder.sapplicant %>
-</p>
-
-<p>
-  <b>Stel:</b>
-  <%= @sorder.stel %>
-</p>
-
-<p>
-  <b>Susetime:</b>
-  <%= @sorder.susetime %>
-</p>
-
-<p>
-  <b>Susereason:</b>
-  <%= @sorder.susereason %>
-</p>
-
-<p>
-  <b>Sname:</b>
-  <%= @sorder.sname %>
-</p>
-
-<p>
-  <b>Sopinion:</b>
-  <%= @sorder.sopinion %>
-</p>
-
-<p>
-  <b>Sreturntime:</b>
-  <%= @sorder.sreturntime %>
-</p>
-
-<p>
-  <b>Ssituation:</b>
-  <%= @sorder.ssituation %>
-</p>
-
-<p>
-  <b>Skeeper:</b>
-  <%= @sorder.skeeper %>
-</p>
-
-
-<%= link_to '编辑', edit_sorder_path(@sorder) %> |
+<div style="width:400px;margin-left:auto;margin-right:auto;">
+<table class="table" border=1>
+    <h4>场地租用申请表</h4>
+  <tr>
+    <td>申请人:</td><td><%= @sorder.sapplicant %></td>
+    <td>联系电话:</td><td><%= @sorder.stel %></td>
+  </tr>
+  <tr>
+    <td colspan="2">使用时间:</td>
+    <td colspan="2"><%= @sorder.susetime %>
+    </td>
+</tr>
+  <tr>
+    <td colspan="2">长时间借用原因:</td>
+    <td colspan="2"><%= @sorder.susereason %>
+    </td>
+</tr>
+  <tr>
+    <td colspan="2">场地名称:</td>
+    <td colspan="2"><%= @sorder.sname %>
+    </td>
+</tr>
+  <tr>
+    <td colspan="2">艺术教学实验中心意见:</td>
+    <td colspan="2"><%= @sorder.sopinion %>
+    </td>
+</tr>
+    <tr>
+    <td colspan="2">归还时间:</td>
+    <td colspan="2"><%= @sorder.sreturntime %>
+    </td>
+</tr>
+  <tr>
+    <td colspan="2">场地归还检查情况:</td>
+    <td colspan="2"> <%= @sorder.ssituation %>
+    </td>
+</tr>
+  <tr>
+    <td colspan="2">外借期间场地保管人:</td>
+    <td colspan="2"><%= @sorder.skeeper %>
+    </td>
+</tr>
+</table>
+<hr>
+</div>
 <%= link_to '返回', sorders_path %>
+
+

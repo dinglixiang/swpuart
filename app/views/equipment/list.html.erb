@@ -9,6 +9,13 @@
       <div class="logoer"><%= image_tag 'equipment_02.gif'%></div>
           <div class="post">
             <table class="table">
+              <tr>
+                <th>设备名称</th>
+                <th>类型</th>
+                <th>设备清单</th>
+                <th>报价</th>
+                <th>剩余</th>                
+              </tr>
               <% @lists.each do |list|%>
               <tr>
                 <td class="span2">

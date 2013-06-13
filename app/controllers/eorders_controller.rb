@@ -1,8 +1,6 @@
 #encoding:utf-8
-
 class EordersController < ApplicationController
   
-
   def index
     eorders = Eorder.find_all_by_eartopinion("同意")
     @eorders = Kaminari.paginate_array(eorders).page(params[:page]).per(5)
@@ -29,7 +27,7 @@ class EordersController < ApplicationController
     
     respond_to do |format|
       if @eorder.save
-        format.html { redirect_to @eorder, notice: '成功创建预约.' }
+        format.html { redirect_to @eorder, notice: '您的预约申请已提交，请耐心等待回复！' }
         format.json { render json: @eorder, status: :created, location: @eorder }
       else
         format.html { render action: "new" }

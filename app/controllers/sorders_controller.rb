@@ -47,7 +47,7 @@ class SordersController < ApplicationController
 
     respond_to do |format|
       if @sorder.save
-        format.html { redirect_to sites_path, notice: '成功提交场地申请表.' }
+        format.html { redirect_to sites_path, notice: '您的预约申请已提交，请耐心等待回复！' }
         format.json { render json: @sorder, status: :created, location: @sorder }
       else
         format.html { render action: "new" }

@@ -1,49 +1,46 @@
-<p id="notice"><%= notice %></p>
-
-
-<p>
-  <b>申请人:</b>
-  <%= @eorder.eapplicant %>
-</p>
-
-<p>
-  <b>联系电话:</b>
-  <%= @eorder.etel %>
-</p>
-
-<p>
-  <b>使用时间:</b>
-  <%= @eorder.eusetime %>
-</p>
-
-<p>
-  <b>长时间借用原因:</b>
-  <%= @eorder.eusereason %>
-</p>
-<p>
-  <b>设备名称:</b>
-  <%= @eorder.ename %>
-</p>
-<p>
-  <b>艺术教学实验中心意见:</b>
-  <%= @eorder.eartopinion %>
-</p>
-
-<p>
-  <b>归还时间:</b>
-  <%= @eorder.ereturntime %>
-</p>
-
-<p>
-  <b>外借期间设备保管人:</b>
-  <%= @eorder.esituation %>
-</p>
-
-<p>
-  <b>Ekeeper:</b>
-  <%= @eorder.ekeeper %>
-</p>
-
-
-<%= link_to '编辑', edit_eorder_path(@eorder) %> |
+<div style="width:400px;margin-left:auto;margin-right:auto;">
+<table class="table" border=1>
+    <h4>设备预约申请表</h4>
+  <tr>
+    <td>申请人:</td><td><%= @eorder.eapplicant %></td>
+    <td>联系电话:</td><td><%= @eorder.etel %></td>
+  </tr>
+  <tr>
+    <td colspan="2">使用时间:</td>
+    <td colspan="2"><%= @eorder.eusetime %>
+    </td>
+</tr>
+  <tr>
+    <td colspan="2">长时间借用原因:</td>
+    <td colspan="2"><%= @eorder.eusereason %>
+    </td>
+</tr>
+  <tr>
+    <td colspan="2">设备名称:</td>
+    <td colspan="2"><%= @eorder.ename %>
+    </td>
+</tr>
+  <tr>
+    <td colspan="2">艺术教学实验中心意见:</td>
+    <td colspan="2"><%= @eorder.eartopinion %>
+    </td>
+</tr>
+    <tr>
+    <td colspan="2">归还时间:</td>
+    <td colspan="2"><%= @eorder.ereturntime %>
+    </td>
+</tr>
+  <tr>
+    <td colspan="2">设备归还检查情况:</td>
+    <td colspan="2"><%= @eorder.esituation %>
+    </td>
+</tr>
+  <tr>
+    <td colspan="2">外借期间设备保管人:</td>
+    <td colspan="2"><%= @eorder.ekeeper %>
+    </td>
+</tr>
+</table>
+<hr>
+</div>
 <%= link_to '返回', eorders_path %>

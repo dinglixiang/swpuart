@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <table border=2>
+  <table border=1>
     <%= f.hidden_field :equipment_id,:value=>equipment.id %>
     <tr>
       <div class="field">
@@ -64,12 +64,12 @@
     <tr>
       <div class="field">
       <td><%= f.label :外借期间设备保管人 %></td>
-      <td><%= f.text_field :ekeeper %></td>
+      <td><%= f.text_field :ekeeper,:disabled => true%></td>
       </div>
     </tr>
   </table>
  <br/>
   <div class="actions">
-    <%= f.submit '提交' %>
+    <%= f.submit '提交',:class => 'btn btn-primary'%>
   </div>
 <% end %>
