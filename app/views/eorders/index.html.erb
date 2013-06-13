@@ -1,25 +1,24 @@
-
-<div class="container">
+<div class="container2">
   <div class="center_content">
     <div class="left_nav">
       <ul>
           <li><%= link_to '实验设备',equipment_index_path%></a></li>
             <li><%= link_to '预约情况',eorders_path%></a></li>
             <li><a href="#">使用情况</a></li>
-        </ul>
+      </ul>
   </div>
 
 
 <div class="right_content">
-      <div class="logoer"><%= image_tag 'equipment_02.gif'%></div>
-
-              <%= render @eorders %>
-    </div>
+  <div class="logoer"><%= image_tag 'equipment_02.gif'%></div>
+      <table class="table table-striped">
+        <%= render @eorders %>
+      </table>
+  </div>
 </div>
 <div class="centerplay">
     <%= paginate @eorders %>
 </div> 
 <br />
-<%= link_to '新建设备预约表', new_eorder_path %>
 </div>
 

@@ -1,13 +1,17 @@
-<li>
-
-	<%= image_tag(site.spicture.url(:one)) if site.spicture.present? %>  
-
-    <%= link_to site.sname ,site%>
-    <%= site.sdescribe %>
-    <%= site.sstate %>
-    <%= link_to '预约', new_sorder_path %>
-      
- </li>
+<tr>
+	<td class="span2">
+		<%= image_tag(site.spicture.url(:one)) if site.spicture.present? %>  
+	</td>
+	<td class="span3">
+    <%= link_to site.sname ,site%><br />
+    <%= site.sdescribe %><br />
+    <%= site.sstate %><br />
+    </td>
+    <td class="span2">
+    	<br />
+    	<%= link_to '预约', new_sorder_path,:class => 'btn' %>  
+    </td>  
+ </tr>
       
 
 

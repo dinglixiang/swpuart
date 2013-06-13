@@ -1,7 +1,9 @@
-  <div>
-    <%= eorder.eapplicant %> 申请
-    <%= eorder.ename %> 成功
-
-    <div class="pull-right"><%= eorder.created_at.strftime("%Y-%m-%d") %></div>
-    
-  </div>
+<tr>
+  	<td class="span1"><%= eorder.eapplicant %></td> 
+    <td class="span1">申请</td> 
+    <td class="span2"><%= eorder.ename %></td> 
+    <td class="span1"><span class="label label-success">&nbsp;成功&nbsp;</span></td>
+    <td class="pull-right span1">
+    	<%= eorder.created_at.strftime("%Y-%m-%d") %>
+    </td>
+</tr>

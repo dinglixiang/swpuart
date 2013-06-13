@@ -138,12 +138,20 @@ RailsAdmin.config do |config|
         html_attributes rows: 10, cols: 50
       end
     end
+    edit do
     field :eprice do
       label "设备报价"
     end
-
-    field :eremain do
-      label "剩余量"
+    end
+    edit do
+      field :eremain do
+        label "剩余量"
+      end
+    end
+    edit do
+      field :epicture do
+        label "图片"
+      end
     end
   end
 
@@ -168,7 +176,7 @@ RailsAdmin.config do |config|
       label "艺术教学实验中心意见"
       enum do
           ['同意','拒绝']
-        end
+      end
     end
     field :ereturntime  do
       label "归还时间"

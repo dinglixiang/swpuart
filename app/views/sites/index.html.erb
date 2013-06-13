@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container2">
 <div class="center_content">
   <div class="left_nav">
       <ul>
@@ -10,9 +10,15 @@
 
 <div class="right_content">
       <div class="logoer"><%= image_tag 'order_2.gif'%></div>
-      <ul id="place">
+      <!--<ul id="place">
         <%= render @sites%> 
-      </ul>
+      </ul>-->
+      <div class="post">
+        <table class="table">
+          <%= render @sites%>
+        </table>   
+      </div>
+      <hr >
 </div>
       
 </div>
@@ -20,7 +26,5 @@
         <%= paginate @sites %>
       </div>  
 <br />
-
-<%= link_to '新建场地', new_site_path %>
 
 </div>

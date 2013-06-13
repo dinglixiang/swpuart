@@ -5,7 +5,7 @@ a{text-decoration:none;}
 /*全局变量定义*/
 
 
-.container{width:964px; height:auto; margin:0 auto; background:#fff; background:url(body.gif) repeat-y; padding:0 2px; border-top:1px solid #fff;}
+.container-all{width:964px; height:auto; margin:0 auto; background:#fff; background:url(body.gif) repeat-y; padding:0 2px; border-top:1px solid #fff;}
 /*整体container*/
 
 

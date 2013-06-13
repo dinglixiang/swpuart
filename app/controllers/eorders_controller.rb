@@ -1,8 +1,6 @@
 #encoding:utf-8
-
 class EordersController < ApplicationController
   
-
   def index
     eorders = Eorder.find_all_by_eartopinion("同意")
     @eorders = Kaminari.paginate_array(eorders).page(params[:page]).per(5)
@@ -16,11 +14,8 @@ class EordersController < ApplicationController
 
   def new
     @eorder = Eorder.new
+    @equipment = Equipment.find_by_id(params[:equipment_id]) if params[:equipment_id]
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @eorder }
-    end
   end
 
   def edit
@@ -28,15 +23,11 @@ class EordersController < ApplicationController
   end
 
   def create
-    # @equipment=pass_equipment(params[:equipment_id])
-    # @equipment.eremain -= 1
     @eorder = Eorder.new(params[:eorder])
-    #@eorder = Eorder.create(:ename => @equipment.ename)
-
+    
     respond_to do |format|
-      if @eorder.save #&& @equipment.save
-        # @equipment.eremain -=1
-        format.html { redirect_to equipment_index_path, notice: '成功提交设备申请表.' }
+      if @eorder.save
+        format.html { redirect_to @eorder, notice: '您的预约申请已提交，请耐心等待回复！' }
         format.json { render json: @eorder, status: :created, location: @eorder }
       else
         format.html { render action: "new" }
@@ -50,7 +41,6 @@ class EordersController < ApplicationController
 
     respond_to do |format|
       if @eorder.update_attributes(params[:eorder])
-
         format.html { redirect_to @eorder, notice: '成功更新设备申请表.' }
         format.json { head :no_content }
       else

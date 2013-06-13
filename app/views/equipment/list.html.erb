@@ -1,0 +1,49 @@
+<div class="container2">
+  <div class="center_content">
+    <div class="left_nav">
+      <ul>
+        </ul>
+  </div>
+
+<div class="right_content">
+      <div class="logoer"><%= image_tag 'equipment_02.gif'%></div>
+          <div class="post">
+            <table class="table">
+              <tr>
+                <th>设备名称</th>
+                <th>类型</th>
+                <th>设备清单</th>
+                <th>报价</th>
+                <th>剩余</th>                
+              </tr>
+              <% @lists.each do |list|%>
+              <tr>
+                <td class="span2">
+                <%= list.ename %> 
+                </td>
+                <td class="span1">  
+                <%= list.etype %>
+                </td>
+                <td class="span3">
+                <%= list.elist %>
+                </td>
+                <td class="span1">
+                <%= list.eprice %>
+                </td>
+                <td class="span1">
+                <%= list.eremain %>
+                </td>
+                <td>
+                  <a href='#'><span class="label label-info">说明书下载</span></a>                    
+                </td>
+              </tr>
+              <% end %>
+
+            </table>
+            <hr />
+          </div>
+    </div>
+</div>
+<div class="centerplay">
+    <%= paginate @lists %>
+</div> 

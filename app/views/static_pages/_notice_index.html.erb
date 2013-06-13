@@ -1,0 +1,7 @@
+<h1>通知公告</h1>
+<% @notices.each do |notice| %>
+
+   <h4 ><p><%= raw notice.ntitle %></p></h4>
+
+<% end %>
+<h2><%= link_to 'For more', notices_path%></h2>

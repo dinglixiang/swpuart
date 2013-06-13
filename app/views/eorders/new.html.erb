@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container2">
   <div class="center_content">
     <div class="left_nav">
       <ul>
@@ -11,10 +11,9 @@
 <div class="right_content">
       <div class="logoer"><%= image_tag 'equipment_02.gif'%></div>
       		<h3>设 备 借 用 申 请 表</h3>
-              <%= render 'form' %>
+          <%= render :partial => "form", :locals => { :equipment => @equipment} %>
     </div>
 </div>
 
 <br />
-<%= link_to '返回', eorders_path %>
 </div>

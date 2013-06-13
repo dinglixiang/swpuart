@@ -3,7 +3,7 @@ class NoticesController < ApplicationController
 
   def index
     notices = Notice.all
-    @notices = Kaminari.paginate_array(notices).page(params[:page]).per(10)
+    @notices = Kaminari.paginate_array(notices).page(params[:page]).per(3)
 
     respond_to do |format|
       format.html # index.html.erb

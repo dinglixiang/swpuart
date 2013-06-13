@@ -11,8 +11,7 @@
     </div>
   <% end %>
 
-  <table border=2>
-  
+  <table border=1>
     <tr>
       <div class="field">
       <td><%= f.label :申请人 %></td>
@@ -46,30 +45,30 @@
     <tr>
       <div class="field">
       <td><%= f.label :艺术教学实验中心意见 %></td>
-      <td><%= f.text_field :sopinion %></td>
+      <td><%= f.text_field :sopinion ,:disabled => true%></td>
       </div>
     </tr>
     <tr>
       <div class="field">
       <td><%= f.label :归还时间 %></td>
-      <td><%= f.text_field :sreturntime %></td>
+      <td><%= f.text_field :sreturntime ,:disabled => true%></td>
       </div>
     </tr>
     <tr>
       <div class="field">
-      <td><%= f.label :场地归还检查情况 %></td>
+      <td><%= f.label :场地归还检查情况 ,:disabled => true%></td>
       <td><%= f.text_field :ssituation %></td>
       </div>
     </tr>
     <tr>
       <div class="field">
       <td><%= f.label :外借期间场地管理人 %></td>
-      <td><%= f.text_field :skeeper %></td>
+      <td><%= f.text_field :skeeper,:disabled => true%></td>
       </div>
     </tr>
   </table>
  <br/>
   <div class="actions">
-    <%= f.submit '提交' %>
+    <%= f.submit '提交',:class => 'btn btn-primary'%>
   </div>
 <% end %>

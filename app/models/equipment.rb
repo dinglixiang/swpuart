@@ -1,6 +1,7 @@
 class Equipment < ActiveRecord::Base
-  attr_accessible :elist, :ename, :eprice, :eremain, :etype,:epicture
+  attr_accessible :elist, :ename, :eprice, :eremain, :etype,:epicture,:epicture_cache,:remove_epicture
  
+
 
   mount_uploader :epicture, AvatarUploader
 
@@ -10,7 +11,6 @@ class Equipment < ActiveRecord::Base
   validates :eremain, :presence => true
 
 
-  # has_many :eorders, :dependent => :destroy
 
 
 end
