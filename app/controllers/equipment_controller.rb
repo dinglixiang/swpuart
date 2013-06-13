@@ -11,7 +11,7 @@ class EquipmentController < ApplicationController
   end
 
   def list
-    @lists=Equipment.page(params[:page]).per(10)
+    @lists=Equipment.page(params[:page]).per(4)
   end
 
   def show
