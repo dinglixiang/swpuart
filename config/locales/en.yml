@@ -20,16 +20,16 @@ en:
   activerecord:
     models:
       site: 
-        one: "场地管理"
+        one: "场地"
         other: "场地管理"
       sorder:
-        one: "场地预约申请"
-        other: "场地预约申请"      
+        one: "场地租用表"
+        other: "场地租用申请"      
       equipment: 
         one: "实验设备"
         other: "实验设备"
       eorder:
-        one: "设备预约申请"
+        one: "设备预约表"
         other: "设备预约申请"
       rule:
         one: "规章制度"
@@ -38,8 +38,11 @@ en:
         one: "通知公告"
         other: "通知公告"
       user: 
-        one: "管理用户"
-        other: "管理用户"           
+        one: "用户"
+        other: "管理用户"
+      video:
+        one: "视频"
+        other: "视频共享"           
     attributes:
       user:
         color: "Shade of grey"

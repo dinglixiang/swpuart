@@ -1,23 +1,24 @@
-<h1>所有的视频</h1>
+<div class="container2">
+  <div class="center_content">
+    <div class="left_nav">
+      <ul>
+        </ul>
+  </div>
 
-<table>
-  
-<% @videos.each do |video| %>
-  <tr>
-     <td id="myContent">
-        
-         Alternative content
-     </td>
-     <td>
-       <%= video.name %>
-     </td>   
-  </tr>
-
-  <tr>
-     <td><%= link_to '播放', video %></td>
-     <td><%= link_to 'Edit', edit_video_path(video) %></td>
-     <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<div class="right_content">
+      <div class="logoer"><%= image_tag 'video.gif'%></div>
+        <table class="table">
+          <% @videos.each do |video| %>
+        <tr class="span4">
+           <td id="myContent" class="span3">
+              
+               Alternative content
+           </td>
+           <td class="span1">
+             <%= video.name %>
+           </td>   
+           <td class="span1"><%= link_to '播放', video %></td>
+        </tr>
 
   <script type="text/javascript" src="swfobject.js"></script>
 
@@ -32,10 +33,13 @@
   so.write('myContent');  
 </script>  
 <% end %>
-</table>
-
-
-  
+        </table>
+        <hr>
+    </div>
+</div>
+<div class="centerplay">
+    
+</div> 
 <br />
 
-<%= link_to '新建视频', new_video_path %>
+</div>

@@ -19,6 +19,12 @@ RailsAdmin.config do |config|
   config.model Rich::RichFile do
     visible false
   end
+  config.model Cart do
+    visible false
+  end
+  config.model LineItem do
+    visible false
+  end
 
 
   ################  Global configuration  ################
@@ -67,6 +73,23 @@ RailsAdmin.config do |config|
   # Now you probably need to tour the wiki a bit: https://github.com/sferik/rails_admin/wiki
   # Anyway, here is how RailsAdmin saw your application's models when you ran the initializer:
 
+  #视频共享
+  config.model Video do
+    field :name do
+      label "视频名称"
+    end
+    field :created_at do
+        label "创建时间"
+        strftime_format "%Y-%m-%d"
+      end
+    edit do
+      field :avatar do
+        label "选择视频"
+      end
+    end
+  end
+
+
   #场地设施
   config.model Site do
       field :sname do
@@ -86,7 +109,7 @@ RailsAdmin.config do |config|
       end
       edit do
       field :spicture do
-        label "图片"
+        label "选择图片"
       end
     end
       field :created_at do
@@ -155,7 +178,7 @@ RailsAdmin.config do |config|
     end
     edit do
       field :epicture do
-        label "图片"
+        label "选择图片"
       end
     end
   end
