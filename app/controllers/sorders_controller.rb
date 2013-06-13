@@ -5,7 +5,7 @@ class SordersController < ApplicationController
   def index
     #@sorders = Sorder.all
     sorders = Sorder.find_all_by_sopinion("同意")
-    @sorders = Kaminari.paginate_array(sorders).page(params[:page]).per(2)
+    @sorders = Kaminari.paginate_array(sorders).page(params[:page]).per(15)
 
     respond_to do |format|
       format.html # index.html.erb

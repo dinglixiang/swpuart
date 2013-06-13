@@ -3,7 +3,7 @@ class EordersController < ApplicationController
   
   def index
     eorders = Eorder.find_all_by_eartopinion("同意")
-    @eorders = Kaminari.paginate_array(eorders).page(params[:page]).per(5)
+    @eorders = Kaminari.paginate_array(eorders).page(params[:page]).per(15)
   end
 
   def show
